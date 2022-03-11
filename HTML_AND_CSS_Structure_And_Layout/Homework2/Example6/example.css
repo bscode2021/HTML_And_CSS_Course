@@ -1,0 +1,32 @@
+header {
+    background-color: #f2a062;
+    padding: 15px;
+}
+
+main {
+    background-color: #8eabc0;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div {
+    background-color: #ab476f;
+    color: white;
+    font-weight: bolder;
+    font-size: 24px;
+    text-align: center;
+    width: 20%;
+    margin: 15px;
+    padding: 100px 0;
+}
+
+.selected {
+    background-color: #823267;
+}
+
+footer {
+    background-color: #b7ce3f;
+    padding: 15px;
+}
+

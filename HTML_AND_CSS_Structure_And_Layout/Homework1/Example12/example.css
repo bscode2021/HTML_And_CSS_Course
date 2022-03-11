@@ -1,0 +1,52 @@
+
+main {
+    width: 30%;
+    margin: 0 auto;
+    padding: 30px;
+    border: 3px solid lightgray;
+}
+
+.subContent {
+    margin-bottom: 15px;
+    border-bottom: 1px solid lightgray;
+    overflow: hidden;
+    padding: 15px;
+}
+
+.subContent ul {
+    float: left;
+    font-size: 32px;
+    margin: 0;
+}
+
+.subContent input {
+    float: right;
+    margin-top: 5%;
+    padding: 15px;
+}
+
+.subContent p {
+    color: gray;
+    clear: both;
+    font-size: 18px;
+    padding: 15px;
+    margin: 0;
+}
+
+.textRed {
+    color: red;
+}
+
+.textOrange {
+    color: orange;
+}
+
+.textGreen {
+    color: olivedrab;
+}
+
+.textBlack {
+    color: black;
+}
+
+
