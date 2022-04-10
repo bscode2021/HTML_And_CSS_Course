@@ -5,10 +5,26 @@ File Name: styles.css
 */
 
 /* CSS Reset */
-body, header, footer, nav, main, footer,h1, ul, div, img {
+body,
+header,
+footer,
+nav,
+main,
+footer,
+h1,
+ul,
+div,
+img,
+figure,
+figcaption {
     margin: 0;
     padding: 0;
     border: 0;
+}
+
+/* Style rule for box sizing applies for all elements */
+* {
+    box-sizing: border-box;
 }
 
 /* Style rules for body and images */
@@ -25,12 +41,9 @@ img {
 
 /* Style rule for header */
 header {
-    position: -webkit-sticky;
-    position: sticky;
     top: 0;
     background-color: #000;
     height: 190px;
-    z-index: 1;
 }
 
 header img {
@@ -38,7 +51,7 @@ header img {
 }
 
 /* Style rule for navigation area */
-nav  {
+nav {
     padding: 1%;
     margin-bottom: 1%;
 }
@@ -51,7 +64,7 @@ nav ul {
 nav ul li {
     font-size: 1.5em;
     /* font-family: 'Roboto Slab', serif; */
-    font-family: 'Francois one', serif; 
+    font-family: 'Francois one', serif;
     border-top: 1px solid #fff;
 }
 
@@ -64,6 +77,11 @@ nav ul li a {
     color: #fff;
     padding: 0.5em 1em;
     text-decoration: none;
+}
+
+nav ul li a:hover { 
+    color: #000;
+    background-color: #fff;
 }
 
 /* Show mobile class, hide tablet-desctop class */
@@ -81,6 +99,10 @@ main {
     padding: 2%;
     font-size: 1.15em;
     font-family: 'Roboto Slab', serif;
+}
+
+.mobile h3 {
+    text-shadow: 5px 5px 8px #ccc;
 }
 
 .tel-link {
@@ -138,7 +160,9 @@ footer p a {
     text-decoration: none;
 }
 
-#waights, #cardio, #training {
+#waights,
+#cardio,
+#training {
     margin: 0 2%;
 }
 
@@ -146,23 +170,12 @@ footer p a {
     border-radius: 8px;
 }
 
-/*
-#exercises {
-    clear: left;
-    border-top: 1px solid #000;
-    border-bottom: 1px solid #000;
-    background-color: #f2f2f2;
-    padding: 1% 2%;
+.map {
+    border: 2px solid #000;
+    width: 95%;
+    height: 50%;
 }
 
-#exercises dt {
-    font-weight: bold;
-}
-
-#exercises dd {
-    padding: 0.5% 1% 2% 0;
-}
-*/
 #contact {
     text-align: center;
 }
@@ -176,6 +189,26 @@ footer p a {
     font-size: 1.35em;
     color: #666600;
     font-weight: bold;
+    text-shadow: 5px 5px 8px #ccc;
+}
+
+.frame {
+    position: relative;
+    max-width: 450px;
+    margin: 2% auto;
+}
+
+.pic-text {
+    position: absolute;
+    bottom: 0;
+    background: rgba(0,0,0,0.5);
+    color: #fff;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
 .external-link {
@@ -184,8 +217,152 @@ footer p a {
     text-decoration: none;
 }
 
-.map {
-    border: 2px solid #000;
-    width: 95%;
-    height: 50%;
+.grid-item4 {
+    grid-column: 1/ 4;
+    background-color: #ccc ;
 }
+
+
+@media screen and (min-width: 680px) {
+
+    /* Tablet Viewport: Show tablet-desktop class, hide mobile class */
+    .mobile {
+        display: none;
+    }
+
+    .tablet-desktop {
+        display: block;
+    }
+
+    /* Tablet Viewport:Style rule for header */
+    header {
+        padding-bottom: 2%;
+    }
+
+    /* Tablet Viewport:Style rule for nav area */
+    nav ul li {
+        border-top: none;
+        display: inline-block;
+        border-right: 1px solid #fff;
+    }
+
+    nav ul li:last-child {
+        border-right: none;
+    }
+
+    nav ul li a {
+        padding: 0.1em 0.75em;
+    }
+
+    /* Tablet Viewport: For main content area */
+    main ul {
+        margin: 0 0 4% 10%;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 20px;
+    }
+
+    .pic-text {
+        font-size: 1em;
+        padding: 10px;
+    }
+
+    #exercises {
+        clear: left;
+        border-top: 1px solid #000;
+        border-bottom: 1px solid #000;
+        background: linear-gradient(to right, #ccc, #fff);
+        background-color: #f2f2f2;
+        padding: 1% 2%;
+    }
+
+    #exercises dt {
+        font-weight: bold;
+    }
+
+    #exercises dd {
+        padding: 0.5% 1% 2% 0;
+    }
+
+    .tel-num {
+        font-size: 1.25em;
+    }
+
+    .map {
+        width: 600px;
+        height: 450px;
+    }
+}
+
+/* Media Query for Desktop */
+@media screen and (min-width: 781px) {
+    header {
+        width: 25%;
+        float: left;
+        padding-bottom: 0;
+    }
+
+    nav {
+        float: right;
+        width: 70%;
+        margin: 4em 1em 0 0;
+    }
+
+    nav ul  {
+        text-align: right;
+    }
+
+    nav ul li {
+        border: none;
+    }
+
+    nav ul li a {
+      padding: 0.5em 1em;
+    }
+
+    /* Desktop Viewport: Style Rules for main content*/
+    main {
+        clear: both;
+    }
+
+    main h1 {
+        font-size: 1.8em;
+    }
+
+    .pic-text {
+        font-size: 1.5em;
+        padding: 20px;
+    }
+
+    .frame {
+        opacity: 0.9;
+    }
+
+    .frame:hover {
+        opacity: 1;
+        box-shadow: 8px 8px 10px #808080;
+    }
+
+    #waights, #cardio, #training {
+        width: 29%;
+        float: left;
+        margin: 0 2%;
+    }
+
+    #exercises {
+       clear: both; 
+    }
+}
+
+/* Media Query for large Desktop */
+@media screen and (min-width: 1921px) {
+    #container {
+        width: 1920px;
+        margin: 0 auto;
+    }
+}
+
+
